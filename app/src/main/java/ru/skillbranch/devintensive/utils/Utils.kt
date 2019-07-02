@@ -15,4 +15,16 @@ object Utils {
 
         return firstName to lastName
     }
+
+    fun toInitials(firstName: String?, lastName: String?): String? {
+
+        val result =  when {
+            !firstName.isNullOrBlank() && !lastName.isNullOrBlank() -> "${firstName.first()}${lastName.first()}"
+            firstName.isNullOrBlank() -> if (lastName.isNullOrBlank()) null else lastName.first().toString()
+            else -> firstName.first().toString()
+        }
+
+        return result?.toUpperCase()
+    }
+
 }
