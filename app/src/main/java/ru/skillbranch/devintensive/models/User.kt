@@ -32,7 +32,7 @@ class User(
     }
 
     data class Builder(
-        var id: String? = null,
+        var id: String,
         var firstName: String? = null,
         var lastName: String? = null,
         var avatar: String? = null,
